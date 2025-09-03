@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Time Log Audit - Tuesday</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+      text-align: center;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #2c3e50;
+      color: white;
+      font-weight: 600;
+    }
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+    .status {
+      text-align: center;
+      font-size: 1.3em;
+    }
+    .summary {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f0f8ff;
+      border-radius: 6px;
+      border-left: 5px solid #3498db;
+    }
+    .summary h3 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+    .note {
+      color: #e74c3c;
+      font-weight: 500;
+    }
+    @media print {
+      body, .container {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+      table {
+        page-break-inside: avoid;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🕒 Time Log Audit – Tuesday</h1>
+    <h2>Based on timelogsummarytable.csv + Manager Updates</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Staff Name</th>
+          <th>Scheduled</th>
+          <th>Actual</th>
+          <th>Overtime</th>
+          <th>Max Excess</th>
+          <th>Excess > MEA?</th>
+          <th class="status">Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Andrés</td>
+          <td>8.0</td>
+          <td>8.27</td>
+          <td>0.27</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Breykell</td>
+          <td>8.0</td>
+          <td>8.18</td>
+          <td>0.18</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Danica</td>
+          <td>8.0</td>
+          <td>8.12</td>
+          <td>0.12</td>
+          <td>1.0</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Daniela</td>
+          <td>8.0</td>
+          <td>8.02</td>
+          <td>0.02</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Diana</td>
+          <td>8.0</td>
+          <td>8.25</td>
+          <td>0.25</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Ela</td>
+          <td>8.0</td>
+          <td>8.28</td>
+          <td>0.28</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Updated: 8-hr schedule; within excess</td>
+        </tr>
+        <tr>
+          <td>Jackie</td>
+          <td>8.0</td>
+          <td>8.02</td>
+          <td>0.02</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Jamillah</td>
+          <td>8.0</td>
+          <td>8.60</td>
+          <td>0.60</td>
+          <td>0.5</td>
+          <td>Yes</td>
+          <td class="status">⚠️</td>
+          <td class="note">Exceeds MEA (0.6 > 0.5) – needs review</td>
+        </tr>
+        <tr>
+          <td>Jenny</td>
+          <td>8.0</td>
+          <td>8.15</td>
+          <td>0.15</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Jobi Dahl</td>
+          <td>8.0</td>
+          <td>8.32</td>
+          <td>0.32</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Updated: 8-hr schedule; within excess</td>
+        </tr>
+        <tr>
+          <td>Juan David</td>
+          <td>7.0</td>
+          <td>8.32</td>
+          <td>1.32</td>
+          <td>0.5</td>
+          <td>Yes</td>
+          <td class="status">🔧</td>
+          <td>Excess due to <strong>WSM sales tasks</strong> – justified</td>
+        </tr>
+        <tr>
+          <td>Juan Esteban</td>
+          <td>8.0</td>
+          <td>8.12</td>
+          <td>0.12</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Juan Pablo</td>
+          <td>7.0</td>
+          <td>6.95</td>
+          <td>-0.05</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Slightly under – no issue</td>
+        </tr>
+        <tr>
+          <td>Katheryn</td>
+          <td>8.0</td>
+          <td>8.27</td>
+          <td>0.27</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Kimberly</td>
+          <td>8.0</td>
+          <td>8.22</td>
+          <td>0.22</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Updated: 8-hr schedule; within excess</td>
+        </tr>
+        <tr>
+          <td>Kirby Joie</td>
+          <td>8.0</td>
+          <td>8.95</td>
+          <td>0.95</td>
+          <td>1.0</td>
+          <td>No</td>
+          <td class="status">💼</td>
+          <td><strong>Approved overtime</strong> – within MEA</td>
+        </tr>
+        <tr>
+          <td>Laura</td>
+          <td>8.0</td>
+          <td>7.23</td>
+          <td>-0.77</td>
+          <td>5.0</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Under hours – no issue</td>
+        </tr>
+        <tr>
+          <td>Leiah</td>
+          <td>7.0</td>
+          <td>7.58</td>
+          <td>0.58</td>
+          <td>2.0</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Liza Maria</td>
+          <td>7.0</td>
+          <td>7.22</td>
+          <td>0.22</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Maria José</td>
+          <td>2.5</td>
+          <td>2.53</td>
+          <td>0.03</td>
+          <td>1.0</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Michelle</td>
+          <td>8.0</td>
+          <td>8.23</td>
+          <td>0.23</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Updated: 8-hr schedule; within excess</td>
+        </tr>
+        <tr>
+          <td>Nicol</td>
+          <td>8.0</td>
+          <td>9.50</td>
+          <td>1.50</td>
+          <td>5.0</td>
+          <td>No</td>
+          <td class="status">🌟</td>
+          <td>High MEA – within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Philip Alvin</td>
+          <td>8.0</td>
+          <td>8.18</td>
+          <td>0.18</td>
+          <td>0.5</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+        <tr>
+          <td>Ruben</td>
+          <td>7.0</td>
+          <td>8.05</td>
+          <td>1.05</td>
+          <td>0.5</td>
+          <td>Yes</td>
+          <td class="status">⚠️</td>
+          <td class="note">Exceeds MEA (1.05 > 0.5) – needs justification</td>
+        </tr>
+        <tr>
+          <td>Zayra</td>
+          <td>8.0</td>
+          <td>8.47</td>
+          <td>0.47</td>
+          <td>5.0</td>
+          <td>No</td>
+          <td class="status">✅</td>
+          <td>Within allowable excess</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <h3>🔍 Summary of Findings</h3>
+      <p><strong>✅ Compliant:</strong> Most staff within policy</p>
+      <p><strong>⚠️ Needs Review:</strong> Jamillah, Ruben</p>
+      <p><strong>🟢 Justified/Approved:</strong> Juan David (WSM), Kirby Joie (approved), Nicol (high MEA)</p>
+      <p><strong>📌 Updates Applied:</strong> Ela, Kimberly, Jobi, Michelle → 8-hour schedule for Tuesday</p>
+    </div>
+  </div>
+</body>
+</html>
